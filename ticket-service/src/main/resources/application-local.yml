@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ticketdb
+  kafka:
+    bootstrap-servers: localhost:9093
+
+logging:
+  level:
+    com.ticketai: DEBUG

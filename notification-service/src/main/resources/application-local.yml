@@ -1,0 +1,7 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9093
+
+logging:
+  level:
+    com.ticketai: DEBUG
