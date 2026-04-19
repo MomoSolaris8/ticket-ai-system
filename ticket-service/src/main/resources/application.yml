@@ -24,8 +24,11 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
         spring.json.type.mapping: ticketCreated:com.ticketai.event.TicketCreatedEvent
-  # Security note: JWT validation happens at API Gateway level (Keycloak)
-  # Internal services trust gateway-forwarded requests in production
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/ticketai
 
 management:
   endpoints:
